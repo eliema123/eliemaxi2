@@ -1,0 +1,474 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    padding-top: 80px;
+    font-family: 'Roboto', sans-serif;
+    /* background: linear-gradient(to right, #B660CD, #f1f1f1); */
+    
+    color: #ffedfa;
+    line-height: 1.6;
+   
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgb(255, 229, 244);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.5rem; /* Ubah ke satuan rem untuk skala responsif */
+    color: #d16597;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem; /* Konsisten dengan font */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #9E52B8; /* Warna hover sesuai tema */
+}
+
+/* Tombol untuk Sign In dan Sign Up */
+.nav .auth-buttons input {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav .auth-buttons input:hover {
+    background-color: #B660CD;
+    color: #fff;
+}
+
+/* Hamburger Menu untuk Responsif */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Main Content (Grid Layout) */
+.grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 20px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url('juice6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-left {
+    flex: 1;
+    max-width: 500px;
+}
+
+.content-left .info h2 {
+    font-size: 2.5rem;
+    color: #d16597;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.content-left .info p {
+    font-size: 1.1rem;
+    color: #d16597;
+    margin-bottom: 30px;
+}
+
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Category Section (Menu Items) */
+.category {
+    background-color: #ffedfa;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+}
+.menu-title {
+    text-align: center;
+}
+
+.list-items {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background: linear-gradient(135deg, #ffd9f0, #ffd9f0);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+}
+
+
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card img:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.food-title h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.desc-juice p {
+    font-size: 0.95rem;
+    color: #777;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.price span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ffedfa;
+    padding: 60px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+}
+.contact-title {
+    text-align: center;
+}
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form,
+.contact-info {
+    flex: 1;
+}
+
+.contact-form h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FF4500;
+}
+
+.contact-form button {
+    padding: 15px 25px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #B660CD;
+}
+
+.contact-info h2 {
+    font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .contact-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+    .contact-card h2 {
+      color: #333333;
+      margin-bottom: 15px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      font-size: 16px;
+      color: #555555;
+    }
+    .contact-item img {
+      width: 20px;
+      margin-right: 10px;
+    }
+    .contact-item a {
+      color: #555555;
+      text-decoration: none;
+    }
+    .contact-item a:hover {
+      color: #007BFF;
+    }
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .auth-buttons {
+        display: none; /* Bisa disesuaikan jika tombol tetap ingin terlihat */
+    }
+}
+
+.our-team {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #86735e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.card-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.footer {
+    background-color: #f8f8f8; /* Light background color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Centering text */
+    color: #000000;
+}
+
+.footer-container {
+    display: flex; /* Flexbox to arrange items */
+    justify-content: space-around; /* Space between items */
+    max-width: 1200px; /* Maximum width of footer content */
+    margin: 0 auto; /* Centering the container */
+    padding: 20px; /* Padding around the container */
+}
+
+.footer-info, .footer-links, .footer-contact {
+    flex: 1; /* Allow equal spacing for each section */
+    padding: 10px; /* Padding for each section */
+}
+
+.footer-links ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li {
+    margin: 5px 0; /* Space between links */
+}
+
+.footer-links a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Darker link color */
+}
+
+.footer-bottom {
+    background-color: rgb(255, 229, 244); /* Darker background for bottom */
+    padding: 10px 0; /* Padding for top and bottom */
+    color: #000000;
+}
+
+.footer-bottom p {
+    margin: 0; /* Remove margin */
+}
